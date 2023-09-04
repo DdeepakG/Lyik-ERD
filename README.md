@@ -8,6 +8,8 @@ erDiagram
     SHARE-BLoC ||--|| LANGUAGE-SVC:""
     LOGIN-UI ||--|| LOGIN-BLoC:""
     LOGIN-UI ||--|| PHONE-AUTH-BLoC:""
+    LOGIN-BLoC ||--|| NETWORK-SVC:""
+    AUTH-SVC ||--|| NETWORK-SVC:""
     PHONE-AUTH-BLoC ||--|| AUTH-SVC:""
     LOGIN-BLoC ||--|| LANGUAGE-SVC:""
     PROFILE-UI ||--|| MEMBER-LIST-BLoC:""
@@ -24,6 +26,7 @@ erDiagram
     VERIFY-EMAIL-BLoC ||--|| VERIFY-EMAIL-SVC:""
     DB-SVC ||--||VERIFY-EMAIL-SVC :""
     VERIFY-EMAIL-BLoC ||--|| LANGUAGE-SVC:""
+    VERIFY-EMAIL-SVC ||--|| NETWORK-SVC:""
 
     SHARE-UI{
        func DisplayShareableItems
@@ -128,3 +131,4 @@ erDiagram
         func DBOperations "It's DB Repository"
     }
     
+    NETWORK-SVC{}
